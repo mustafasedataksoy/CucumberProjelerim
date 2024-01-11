@@ -52,7 +52,8 @@ public class Parent {
 
     public void verifyContainsTextFunction(WebElement element , String value)
     {
-        waitUntilVisible(element);
+       // waitUntilVisible(element);
+        wait.until(ExpectedConditions.textToBePresentInElement(element,value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"The text  you searched could'nt be find ");
 
     }
