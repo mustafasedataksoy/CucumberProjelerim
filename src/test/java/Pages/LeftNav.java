@@ -1,6 +1,5 @@
 package Pages;
 
-import Utulities.GWD;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -25,6 +24,24 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//*[text()='Citizenships']")
     private WebElement citizenShip;
 
+    @FindBy(xpath = "//span[text()='Nationalities']")
+    private WebElement nationalities;
+
+    @FindBy(xpath = "(//span[text()='Fees'])[1]")
+    private WebElement feesSetup;
+
+    @FindBy(xpath = "(//span[text()='Entrance Exams'])[1]")
+    private WebElement entranceExamsOne;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[2]")
+    private WebElement setupTwo;
+
+    @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
+    private WebElement entranceExamsTwo;
+
+    @FindBy(xpath = "//span[contains(text(),'States')]")
+    private WebElement states;
+
     WebElement myElement;
 
 
@@ -36,6 +53,11 @@ public class LeftNav extends Parent{
             case "parameters" :myElement=parameters;break;
             case "countries" : myElement=countries;break;
             case "citizenShip" :  myElement=citizenShip;break;
+            case "nationalities" : myElement=nationalities;break;
+            case "feesSetup" : myElement=feesSetup;break;
+            case "entranceExamsOne" : myElement=entranceExamsOne;break;
+            case "setupTwo" : myElement=setupTwo;break;
+            case "entranceExamsTwo" : myElement=entranceExamsTwo;break;
         }
 
         clickFunction(myElement);
