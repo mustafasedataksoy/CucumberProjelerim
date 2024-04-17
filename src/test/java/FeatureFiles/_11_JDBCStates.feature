@@ -1,8 +1,8 @@
 Feature: Testing JDBC States
 
   Background:
-    Given Naviagate to Campus
-    When Enter username and password and click Login button
+    Given Navigate to Campus
+    When Enter username and password and click login button
     Then User should login successfuly
 
   Scenario: States testing with JDBC
